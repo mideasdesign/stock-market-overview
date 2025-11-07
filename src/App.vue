@@ -1,38 +1,43 @@
 <script setup lang="ts">
-import CardComponent from './components/CardComponent.vue'
+import Card from '@/components/Card.vue'
 </script>
 
 <template>
-  <div class="app-container">
-    <h1>Stock Market Overview</h1>
+  <header>
+    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-    <CardComponent title="Beispiel Card 1">
-      <p>Dies ist der Inhalt der ersten Card.</p>
-    </CardComponent>
+    <div class="wrapper">
+      <h1>Stock App</h1>
+    </div>
+  </header>
 
-    <CardComponent title="Beispiel Card 2">
-      <p>Dies ist der Inhalt der zweiten Card.</p>
-      <p>Sie können beliebigen Inhalt hier einfügen!</p>
-    </CardComponent>
-
-    <CardComponent>
-      <p>Diese Card hat keinen Titel.</p>
-    </CardComponent>
-  </div>
+  <main>
+    <section>
+      <Card>
+        <h2>Erste Card</h2>
+        <p>Das ist schon alles</p>
+    </Card>
+    </section>
+    <section>
+      <Card>
+        <h2>Zweite Card</h2>
+        <p>Hier kannst du beliebigen Content einfügen</p>
+      </Card>
+    </section>
+  </main>
 </template>
 
-<style scoped>
-.app-container {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
-h1 {
-  margin-bottom: 20px;
-}
-
-.card-component {
-  margin-bottom: 16px;
+#app{
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #d8dbdf;
+  margin-top: 60px;
 }
 </style>
