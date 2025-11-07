@@ -33,11 +33,31 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 #app{
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
   color: #d8dbdf;
   margin-top: 60px;
+  height:100svh;
+  width: 10svw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+  width: 90svw;
+  gap: 20px;
+}
+section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 </style>
