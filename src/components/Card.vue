@@ -1,9 +1,25 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
+import { useApiData } from '../composables/useApiData'
+
+
+const { data, loading, error, fetchData } = useApiData()
+
+// Fetch on component mount
+onMounted(() => {
+  fetchData()
+})
 </script>
 
 <template>
   <div class="card">
     <slot />
+      <div v-if="loading">Loading...</div>
+      <div v-else-if="error">{{ error }}</div>
+      <div v-else>
+        <!-- Use data here -->
+        <pre>{{ data }}</pre>
+      </div>
   </div>
 </template>
 

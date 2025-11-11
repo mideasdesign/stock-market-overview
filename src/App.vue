@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Card from '@/components/Card.vue'
 </script>
-
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
@@ -19,14 +18,19 @@ import Card from '@/components/Card.vue'
     </Card>
     </section>
     <section>
-      <Card>
+      <div class="carts">
+        <Card>
         <h2>Zweite Card</h2>
         <p>Hier kannst du beliebigen Content einfügen</p>
       </Card>
+      <Card>
+        <h2>Dritte Card</h2>
+        <p>Hier kannst du beliebigen Content einfügen</p>
+      </Card>
+      </div>
     </section>
   </main>
 </template>
-
 <style>
 body {
   margin: 0;
@@ -59,5 +63,9 @@ section{
   width: 100%;
   display: flex;
   justify-content: center;
+}
+.carts{
+  display: flex;
+  gap: 1rem;
 }
 </style>
